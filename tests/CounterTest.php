@@ -73,7 +73,11 @@ class CounterTest extends TestCase
         ];
     }
 
-    /** @dataProvider nonIntegerProvider */
+    /**
+     * @param $nonInteger
+     *
+     * @dataProvider nonIntegerProvider
+     */
     public function testShouldNotAcceptNonIntegers($nonInteger): void
     {
         $this->expectException(InvalidArgumentException::class);
