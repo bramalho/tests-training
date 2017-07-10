@@ -1,0 +1,23 @@
+<?php
+
+use PHPUnit\Framework\TestCase;
+use BrunoTests\Counter;
+
+class CounterTest extends TestCase
+{
+    /** @var  Counter */
+    private $counter;
+
+    protected function setUp()
+    {
+        $this->counter = new Counter();
+    }
+
+    public function testShouldStartAtOne()
+    {
+        $expected = $this->counter->next();
+        $actual = 1;
+
+        $this->assertEquals($expected, $actual);
+    }
+}
