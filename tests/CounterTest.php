@@ -15,6 +15,11 @@ class CounterTest extends TestCase
         $this->counter = new Counter();
     }
 
+    protected function tearDown()
+    {
+        unset($this->counter);
+    }
+
     public function testShouldStartAtOne(): void
     {
         $expected = $this->counter->next();
