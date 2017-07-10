@@ -1,5 +1,5 @@
-# Bruno Tests
-Test examples with Sebastian Bergmann
+# Tests Training
+Tests training with Sebastian Bergmann
 
 #### Install:
 1. `composer upadate`
