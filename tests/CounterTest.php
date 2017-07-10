@@ -20,4 +20,14 @@ class CounterTest extends TestCase
 
         $this->assertEquals($expected, $actual);
     }
+
+    public function testShouldGetTwo(): void
+    {
+        $this->counter->next();
+
+        $expected = $this->counter->next();
+        $actual = 2;
+
+        $this->assertEquals($expected, $actual);
+    }
 }
