@@ -10,68 +10,48 @@ class CounterTest extends TestCase
     /** @var  Counter */
     private $counter;
 
-    protected function setUp(): void
+    protected function setUp() : void
     {
         $this->counter = new Counter();
     }
 
-    protected function tearDown()
+    protected function tearDown() : void
     {
         unset($this->counter);
     }
 
-    public function testShouldStartAtOne(): void
+    public function testShouldStartAtOne() : void
     {
-        $expected = $this->counter->next();
-        $actual = 1;
-
-        $this->assertEquals($expected, $actual);
+        $this->assertEquals(1, $this->counter->next());
     }
 
-    public function testShouldGetTwo(): void
+    public function testShouldGetTwo() : void
     {
         $this->counter->next();
-
-        $expected = $this->counter->next();
-        $actual = 2;
-
-        $this->assertEquals($expected, $actual);
+        $this->assertEquals(2, $this->counter->next());
     }
 
-    public function testShouldIncrementTwo(): void
+    public function testShouldIncrementTwo() : void
     {
         $this->counter->setIncrement(2);
-
-        $expected = $this->counter->next();
-        $actual = 2;
-
-        $this->assertEquals($expected, $actual);
+        $this->assertEquals(2, $this->counter->next());
     }
 
-    public function testShouldIncrementZero(): void
+    public function testShouldIncrementZero() : void
     {
         $this->counter->setIncrement(0);
-
-        $expected = $this->counter->next();
-        $actual = 0;
-
-        $this->assertEquals($expected, $actual);
-
-        $expected = $this->counter->next();
-        $this->assertEquals($expected, $actual);
+        $this->counter->next();
+        $this->counter->next();
+        $this->assertEquals(0, $this->counter->next());
     }
 
-    public function testShouldGetMinusOne(): void
+    public function testShouldGetMinusOne() : void
     {
         $this->counter->setIncrement(-1);
-
-        $expected = $this->counter->next();
-        $actual = -1;
-
-        $this->assertEquals($expected, $actual);
+        $this->assertEquals(-1, $this->counter->next());
     }
 
-    public function nonIntegerProvider(): array
+    public function nonIntegerProvider() : array
     {
         return [
             'float'     => [1.1],
@@ -85,7 +65,7 @@ class CounterTest extends TestCase
      * @param $nonInteger
      * @dataProvider nonIntegerProvider
      */
-    public function testShouldNotAcceptNonIntegers($nonInteger): void
+    public function testShouldNotAcceptNonIntegers($nonInteger) : void
     {
         $this->expectException(InvalidArgumentException::class);
 

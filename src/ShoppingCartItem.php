@@ -2,8 +2,5 @@
 
 interface ShoppingCartItem
 {
-    /**
-     * @return int
-     */
-    public function price();
+    public function price() : int;
 }

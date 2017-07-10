@@ -6,7 +6,7 @@ class ShoppingCart
 
     private $loggers = [];
 
-    public function addItem(ShoppingCartItem $item)
+    public function addItem(ShoppingCartItem $item) : void
     {
         $this->items[] = $item;
 
@@ -15,17 +15,17 @@ class ShoppingCart
         }
     }
 
-    public function attachLogger(Logger $logger)
+    public function attachLogger(Logger $logger) : void
     {
         $this->loggers[] = $logger;
     }
 
-    public function items()
+    public function items() : array
     {
         return $this->items;
     }
 
-    public function total()
+    public function total() : int
     {
         $total = 0;
 

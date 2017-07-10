@@ -2,5 +2,5 @@
 
 interface Logger
 {
-    public function log($message);
+    public function log(string $message) : void;
 }
