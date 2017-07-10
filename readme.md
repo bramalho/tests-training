@@ -5,7 +5,7 @@ Tests training with Sebastian Bergmann
 1. `composer upadate`
 
 #### Run:
-1. `./vendor/bin/phpunit --colors`
+1. `phpunit --colors`
 
 ### Coverage:
-1. `./vendor/bin/phpunit --coverage-html ./coverage`
+1. `phpunit --coverage-html ./coverage`
