@@ -77,7 +77,7 @@ class CounterTest extends TestCase
             'float'     => [1.1],
             'string'    => ["1"],
             'null'      => [null],
-            'array'     => []
+            'array'     => [[]]
         ];
     }
 
