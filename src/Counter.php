@@ -1,7 +1,5 @@
 <?php
 
-namespace BrunoTests;
-
 use Prophecy\Exception\InvalidArgumentException;
 
 class Counter

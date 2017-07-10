@@ -1,7 +1,6 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use BrunoTests\Counter;
 
 class CounterTest extends TestCase
 {
