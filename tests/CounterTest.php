@@ -8,12 +8,12 @@ class CounterTest extends TestCase
     /** @var  Counter */
     private $counter;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->counter = new Counter();
     }
 
-    public function testShouldStartAtOne()
+    public function testShouldStartAtOne(): void
     {
         $expected = $this->counter->next();
         $actual = 1;
