@@ -75,7 +75,6 @@ class CounterTest extends TestCase
 
     /**
      * @param $nonInteger
-     *
      * @dataProvider nonIntegerProvider
      */
     public function testShouldNotAcceptNonIntegers($nonInteger): void
