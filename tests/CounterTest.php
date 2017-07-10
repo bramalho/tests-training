@@ -2,6 +2,9 @@
 
 use PHPUnit\Framework\TestCase;
 
+/**
+ * @covers Counter
+ */
 class CounterTest extends TestCase
 {
     /** @var  Counter */
@@ -61,5 +64,20 @@ class CounterTest extends TestCase
         $actual = -1;
 
         $this->assertEquals($expected, $actual);
+    }
+
+    public function nonIntegerProvider(): array
+    {
+        return [
+            [1.1], ["1"], [null]
+        ];
+    }
+
+    /** @dataProvider nonIntegerProvider */
+    public function testShouldNotAcceptNonIntegers($nonInteger): void
+    {
+        $this->expectException(InvalidArgumentException::class);
+
+        $this->counter->setIncrement($nonInteger);
     }
 }
