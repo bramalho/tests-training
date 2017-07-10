@@ -20,7 +20,7 @@ class ShoppingCartTest extends TestCase
         unset($this->shoppingCart);
     }
 
-    public function testShoppingCartStartEmptyItems() : void
+    public function testShoppingCartStartWithEmptyItems() : void
     {
         $this->assertEmpty($this->shoppingCart->items());
     }
