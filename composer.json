@@ -1,6 +1,6 @@
 {
-    "name": "BrunoTests",
-    "description": "Bruno Tests",
+    "name": "tests-training",
+    "description": "Tests Training",
     "type": "library",
     "license": "proprietary",
     "autoload": {
